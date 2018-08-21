@@ -1,0 +1,30 @@
+{
+  "name": "exchange-prototype",
+  "version": "0.0.1",
+  "description": "NodeJS Trading Exchange Prototype",
+  "main": "lib/index.js",
+  "author": "Adrian Cearnau (cearny@gmail.com)",
+  "license": "MIT",
+  "scripts": {
+    "debug": "nodemon --legacy-watch --watch ./lib --experimental-worker --inspect=0.0.0.0:9222 --nolazy ./lib/index.js",
+    "docker-debug": "docker-compose up",
+    "start": "node ./lib",
+    "lint": "eslint lib/**/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "bintrees": "^1.0.2",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-ws": "^4.0.0",
+    "queue": "^4.5.0",
+    "uuid": "^3.3.2",
+    "winston": "^3.0.0"
+  }
+}

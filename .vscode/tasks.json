@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch in Docker",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": [ "run", "docker-debug" ],
+      "port": 9222,
+      "restart": true,
+      "timeout": 60000,
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "/code",
+      "outFiles": [
+        "${workspaceFolder}/code/**/*.js"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

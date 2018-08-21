@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  web:
+    build: .
+    command: yarn run debug
+    volumes:
+      - ./lib:/code/lib
+    ports:
+      - "3000:3000"
+      - "9222:9222"
